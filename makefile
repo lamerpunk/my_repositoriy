@@ -11,7 +11,7 @@ HEADER = utils.h
 TARGET = myprogram
 
 # Specify the compiler flags
-CXXFLAGS = -Wall -Wextra -std=c++11
+CXXFLAGS = -Wall -Wextra -std=c++20
 
 # Specify the build target
 all: $(TARGET)
