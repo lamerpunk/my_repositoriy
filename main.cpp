@@ -12,19 +12,16 @@ double d(double x, double y, auto f_x)
   {
     return line0(x, y, f_x);
   }
-  else if (x < y)
+  if (x < y)
   {
     return line1(x, y, f_x);
   }
-  else
-  {
-    return line2(x, y, f_x);
-  }
+  return line2(x, y, f_x);
 }
 
 double line0(double x, double y, auto f_x)
 {
-  return f_x(x) - f_x(y); //пример
+  return pow(sqrt(fabs((f_x2 - y))), 1/3.0) + tg * f_x2; //пример
 }
 
 
