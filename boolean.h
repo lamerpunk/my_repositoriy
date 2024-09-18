@@ -1,3 +1,6 @@
+namespace boolean {
+    
+
 /**
  * Checks whether a given integer is even.
  * begin2
@@ -38,4 +41,20 @@ bool begin5(int a, int b) {
 
 bool begin6(int a, int b, int c) {
     return (a < b) && (b < c);
+}
+
+bool begin7(int a, int b, int c) {
+    return (b < a) && (b < c);
+}
+
+bool begin8(int a, int b, int c) {
+    //return is_not_even(a) && is_not_even(b) && is_not_even(c);
+    return (a % 2 != 0) && (b % 2 != 0) && (c % 2 != 0);
+}
+
+bool begin9(int a, int b) {
+    return (a % 2 != 0) || (b % 2 != 0);
+}
+
+
 }
