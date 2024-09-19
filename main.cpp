@@ -4,9 +4,10 @@
 #include "boolean.h"
 
 
+
 int main()
 {
-  bool result = boolean::is_even(10);
+  bool result = boolean::begin10(5,5);
   std::cout << result << std::endl;
   return 0;
 }

@@ -56,5 +56,9 @@ bool begin9(int a, int b) {
     return (a % 2 != 0) || (b % 2 != 0);
 }
 
+bool begin10(int a, int b) {
+    return (a % 2 != 0 || b % 2 == 0) && (a % 2 == 0 || b % 2 != 0);
+}
+
 
 }
