@@ -50,3 +50,32 @@ int if4(int a, int b, int c) {
     }
     return count;
 }
+
+int if5(int a, int b, int c) {
+    int count = 0;
+    if(a > 0)
+    {
+        ++count;
+    }
+    else
+    {
+        --count;
+    }
+    if(b > 0)
+    {
+        ++count;
+    }
+    else
+    {
+        --count;
+    }
+    if(c > 0)
+    {
+        ++count;
+    }
+    else
+    {
+        --count;
+    }
+    return count;
+}
