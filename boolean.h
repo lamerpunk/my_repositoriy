@@ -60,5 +60,22 @@ bool begin10(int a, int b) {
     return (a % 2 != 0 || b % 2 == 0) && (a % 2 == 0 || b % 2 != 0);
 }
 
+bool begin11(int a, int b) {
+    return (a % 2 == 0 && b % 2 == 0) || (a % 2 !=0 && b % 2 != 0);
+}
+
+bool begin12(int a, int b, int c) {
+    return (a > 0 && b > 0 && c > 0);
+}
+
+bool begin13(int a, int b, int c) {
+    return (a > 0 || b > 0 || c > 0);
+}
+
+
+bool begin14 (int a, int b, int c) {
+    return (a > 0 and b <= 0 and c <= 0) || (a <= 0 and b > 0 and c <= 0) || (a <= 0 and b <= 0 and c > 0);
+}
+
 
 }

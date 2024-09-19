@@ -7,7 +7,7 @@
 
 int main()
 {
-  bool result = boolean::begin10(5,5);
+  bool result = boolean::begin11(3, 2);
   std::cout << result << std::endl;
   return 0;
 }
