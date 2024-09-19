@@ -2,12 +2,14 @@
 #include "utils.h"
 #include <cmath>
 #include "boolean.h"
-
-
+#include "if.h"
 
 int main()
 {
-  bool result = boolean::begin11(3, 2);
-  std::cout << result << std::endl;
+  std::cout << "rezult: " << if1(5) << std::endl;
+
+
+  // bool result = boolean::begin20(5, 5, 5);
+  // std::cout << result << std::endl;
   return 0;
 }
