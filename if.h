@@ -79,3 +79,45 @@ int if5(int a, int b, int c) {
     }
     return count;
 }
+
+int if6(int a, int b) {     //тут по заданию b не должно выводится в случае иначе, но после будет иначе - ошибка.
+    if (a > b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
+
+int if7(int a, int b) {     // не уверен насчет tolower
+    if (a < b)
+    {
+        return std::tolower(a);
+    }
+    else
+    {
+        return std::tolower(b);
+    }
+}
+
+
+void if8(int a, int b) {
+    if (a > b)
+    {
+        std::cout << a << std::endl;
+        std::cout << b << std::endl;
+    }
+    else if (a < b)
+    {
+        std::cout << b << std::endl;
+        std::cout << a << std::endl;
+    }
+    else
+    {
+        std::cout << "a == b" << std::endl;
+    }
+}
+
+
