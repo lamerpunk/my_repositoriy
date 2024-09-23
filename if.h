@@ -85,10 +85,7 @@ int if6(int a, int b) {     //тут по заданию b не должно в�
     {
         return a;
     }
-    else
-    {
-        return b;
-    }
+    return b;
 }
 
 int if7(int a, int b) {     // не уверен насчет tolower
@@ -96,10 +93,8 @@ int if7(int a, int b) {     // не уверен насчет tolower
     {
         return std::tolower(a);
     }
-    else
-    {
-        return std::tolower(b);
-    }
+    return std::tolower(b);
+
 }
 
 
@@ -120,4 +115,27 @@ void if8(int a, int b) {
     }
 }
 
+void if9(double& a, double& b) {
+    if (a > b)
+    {
+        std::swap(a, b);
+        return;
+    }
+    return;
+}
 
+void if10(double& a, double& b) {
+    if (a > b || a < b) 
+    {
+        a = a + b;
+        b = a; 
+        return;
+    }
+    else if (a == b)
+    {
+        a = 0;
+        b = 0;
+        return;
+    }
+    std::cout << a << " " << b << std::endl;
+}
