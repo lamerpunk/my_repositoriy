@@ -124,7 +124,7 @@ void if9(double& a, double& b) {
     return;
 }
 
-void if10(double& a, double& b) {
+void if10(double& a, double& b) {          // условие задания выполняется верно, но переменные должны быть int, а double
     if (a > b || a < b) 
     {
         a = a + b;
@@ -139,3 +139,31 @@ void if10(double& a, double& b) {
     }
     std::cout << a << " " << b << std::endl;
 }
+
+void if11(double a, double b) {
+    if (a != b) 
+    {
+        if (a > b) {
+            b = a;
+        }
+        else {a = b;}    
+    }
+    else {
+        a = 0;
+        b = 0;
+    }
+    std::cout << a << " " << b << std::endl;
+}
+
+int if12(int a, int b, int c) {
+    if (a > b && a > c) {
+        return a;
+    }
+    else if (b > a && b > c) {
+        return b;
+    }
+    else {
+        return c;
+    }
+}
+
