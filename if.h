@@ -198,6 +198,17 @@ int if12(int a, int b, int c)
     }
 }
 
-// int if13(int a, int b, int c) {
+int if13(int a, int b, int c) {
+    int max = std::max(a, std::max(b, c));
+    if (max == a)
+    {
+        return std::max(b,c);
+    }
+    if (max == b)
+    {
+        return std::max(a,c);
+    }
+    return std::max(a,b);
     
-// }
+}
+

@@ -23,3 +23,17 @@ $(TARGET): $(SOURCES) $(HEADER)
 # Clean up the build files
 clean:
 	rm -f $(TARGET)
+
+GTEST_INCLUDE_DIRS = /usr/include
+GTEST_LIBRARY_DIRS = /usr/lib
+GTEST_LIBRARIES = -lgtest -lgtest_main
+
+CXXFLAGS += -I$(GTEST_INCLUDE_DIRS)
+LDFLAGS += -L$(GTEST_LIBRARY_DIRS) -Wl,-rpath,$(GTEST_LIBRARY_DIRS)
+LDLIBS += $(GTEST_LIBRARIES)
+
+all: test
+test: test.o
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o test test.o $(LDLIBS)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o test test.cpp $(LDLIBS)
+	./test
