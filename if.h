@@ -52,32 +52,32 @@ int if4(int a, int b, int c)
 int if5(int a, int b, int c)
 {
     return (a > 0 ? 1 : -1) + (b > 0 ? 1 : -1) + (c > 0 ? 1 : -1);
-//     int count = 0;
-//     if (a > 0)
-//     {
-//         ++count;
-//     }
-//     else
-//     {
-//         --count;
-//     }
-//     if (b > 0)
-//     {
-//         ++count;
-//     }
-//     else
-//     {
-//         --count;
-//     }
-//     if (c > 0)
-//     {
-//         ++count;
-//     }
-//     else
-//     {
-//         --count;
-//     }
-//     return count;
+    //     int count = 0;
+    //     if (a > 0)
+    //     {
+    //         ++count;
+    //     }
+    //     else
+    //     {
+    //         --count;
+    //     }
+    //     if (b > 0)
+    //     {
+    //         ++count;
+    //     }
+    //     else
+    //     {
+    //         --count;
+    //     }
+    //     if (c > 0)
+    //     {
+    //         ++count;
+    //     }
+    //     else
+    //     {
+    //         --count;
+    //     }
+    //     return count;
 }
 
 int max(int a, int b)
@@ -89,7 +89,8 @@ int max(int a, int b)
     return b;
 }
 
-int max(int a, int b, int c){
+int max(int a, int b, int c)
+{
     return max(max(a, b), c);
 }
 
@@ -162,23 +163,23 @@ void if11(double a, double b)
     {
         a = b;
     }
-// }
-//     if (a != b)
-//     {
-//         if (a > b)
-//         {
-//             b = a;
-//         }
-//         else
-//         {
-//             a = b;
-//         }
-//     }
-//     else
-//     {
-//         a = 0;
-//         b = 0;
-//     }
+    // }
+    //     if (a != b)
+    //     {
+    //         if (a > b)
+    //         {
+    //             b = a;
+    //         }
+    //         else
+    //         {
+    //             a = b;
+    //         }
+    //     }
+    //     else
+    //     {
+    //         a = 0;
+    //         b = 0;
+    //     }
     std::cout << a << " " << b << std::endl;
 }
 
@@ -198,17 +199,91 @@ int if12(int a, int b, int c)
     }
 }
 
-int if13(int a, int b, int c) {
+int if13(int a, int b, int c)
+{
     int max = std::max(a, std::max(b, c));
     if (max == a)
     {
-        return std::max(b,c);
+        return std::max(b, c);
     }
     if (max == b)
     {
-        return std::max(a,c);
+        return std::max(a, c);
     }
-    return std::max(a,b);
-    
+    return std::max(a, b);
+}
+
+int if14(int a, int b, int c)
+{
+    int min = std::min(a, std::min(b, c));
+    int max = std::max(a, std::max(b, c));
+    std::cout << min << " " << max << std::endl;
+    return 0;
+}
+
+int if15(int a, int b, int c)
+{
+    int max1 = a;
+    int max2 = b;
+
+    if (b > max1)
+    {
+        max1 = b;
+        max2 = a;
+    }
+    if (c > max1)
+    {
+        max2 = max1;
+        max1 = c;
+    }
+    else if (c > max2)
+    {
+        max2 = c;
+    }
+    return max1 + max2;
+}
+
+void if16(int a, int b, int c) { 
+    if ((a <= b && a <= c && b <=c)) 
+    {
+        a *= 2;
+        b *= 2;
+        c *= 2;
+    }
+    else {
+        a = -a;
+        b = -b;
+        c = -c;
+    }
+    std::cout << a << " " << b << " " << c << std::endl;
+}
+
+void if17(int a, int b, int c){
+    if ((a >= b && a >= c && b >= c) || (a <= b && a <= c && b <= c))
+    {
+        a *= 2;
+        b *= 2;
+        c *= 2;
+    }
+    else 
+    {
+        a = -a;
+        b = -b;
+        c = -c;
+    }
+    std::cout << a << " " << b << " " << c << std::endl;
+}
+
+int if18(int a, int b, int c) {
+    if (a == b) return 3; 
+    if (a == c) return 2; 
+    return 1; 
+}
+
+
+int if27(double x) {
+    if (x < 0) return 0;
+    int n = static_cast<int>(x);  //уточнить
+    return (n % 2 == 0) ? 1 : -1;
 }
 

@@ -10,8 +10,7 @@
 
 int main()
 { 
-
-
+std::cout << if18(2, 2, 3);
 
 
 //   int x = 0;
