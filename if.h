@@ -443,3 +443,41 @@ int if19(int a, int b, int c, int d){
         }
         std::cout << 0 << std::endl;
     }
+
+    std::string if29(int n) {
+    if (n == 0) {
+        return "нулевое число";
+    } else if (n > 0) {
+        if (n % 2 == 0) {
+            return "положительное четное число";
+        } else {
+            return "положительное нечетное число";
+        }
+    } else {
+        if (n % 2 == 0) {
+            return "отрицательное четное число";
+        } else {
+            return "отрицательное нечетное число";
+        }
+    }
+    }
+
+    std::string if30(int n) {
+        std::string parity;
+        if (n % 2 == 0) {
+            parity = "четное";
+        } else {
+            parity = "нечетное";
+        }
+
+        std::string digits;
+        if (n < 10) {
+            digits = "однозначное";
+        } else if (n < 100) {
+            digits = "двузначное";
+        } else {
+            digits = "трехзначное";
+        }
+
+        return parity + " " + digits + " число";
+    }
