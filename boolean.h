@@ -5,7 +5,7 @@ namespace boolean {
  * @param x The number to be checked.
  * @return true if the number is even, false otherwise.
  */
-bool is_even(int x) {
+bool begin1(int x) {
     return x % 2 == 0;
 }
 
@@ -15,8 +15,8 @@ bool is_even(int x) {
  * @param x The number to be checked.
  * @return true if the number is not even, false otherwise.
  */
-bool is_not_even(int x) {
-    return !is_even(x);
+bool begin2(int x) {
+    return !begin2(x);
 }
 
 /**
@@ -25,7 +25,7 @@ bool is_not_even(int x) {
  * @param x The number to be checked.
  * @return true if the number is positive, false otherwise.
  */
-bool is_positive(int x) {
+bool begin3(int x) {
     return x > 0;
 }
 
