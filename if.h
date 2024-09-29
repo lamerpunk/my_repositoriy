@@ -243,14 +243,16 @@ int if15(int a, int b, int c)
     return max1 + max2;
 }
 
-void if16(int a, int b, int c) { 
-    if ((a <= b && a <= c && b <=c)) 
+void if16(int a, int b, int c)
+{
+    if ((a <= b && a <= c && b <= c))
     {
         a *= 2;
         b *= 2;
         c *= 2;
     }
-    else {
+    else
+    {
         a = -a;
         b = -b;
         c = -c;
@@ -258,14 +260,15 @@ void if16(int a, int b, int c) {
     std::cout << a << " " << b << " " << c << std::endl;
 }
 
-void if17(int a, int b, int c){
+void if17(int a, int b, int c)
+{
     if ((a >= b && a >= c && b >= c) || (a <= b && a <= c && b <= c))
     {
         a *= 2;
         b *= 2;
         c *= 2;
     }
-    else 
+    else
     {
         a = -a;
         b = -b;
@@ -274,16 +277,169 @@ void if17(int a, int b, int c){
     std::cout << a << " " << b << " " << c << std::endl;
 }
 
-int if18(int a, int b, int c) {
-    if (a == b) return 3; 
-    if (a == c) return 2; 
-    return 1; 
+int if18(int a, int b, int c)
+{
+    if (a == b)
+        return 3;
+    if (a == c)
+        return 2;
+    return 1;
 }
 
-
-int if27(double x) {
-    if (x < 0) return 0;
-    int n = static_cast<int>(x);  //уточнить
-    return (n % 2 == 0) ? 1 : -1;
+int if19(int a, int b, int c, int d){
+    if (a == b)
+    {
+        if (c == d)
+            return 1;
+        if (a == c)
+        {
+            if (b == d)
+                return 1;
+            else
+                return 2;
+        }
+        if (a == d)
+        {
+            if (b == c)
+                return 1;
+            else
+                return 2;
+        }
+        return 4;
+    }
 }
 
+    void if20(int a, int b, int c)
+    {
+        int distAB = std::abs(a - b);
+        int distAC = std::abs(a - c);
+
+        if (distAB < distAC)
+        {
+            std::cout << "Точка B расположена ближе к A. Расстояние: " << distAB << std::endl;
+        }
+        else
+        {
+            std::cout << "Точка C расположена ближе к A. Расстояние: " << distAC << std::endl;
+        }
+    }
+
+    int if21(int x, int y)
+    {
+        if (x == 0 && y == 0)
+        {
+            std::cout << "Точка совпадает с началом координат" << std::endl;
+        }
+        else if (x == 0)
+        {
+            return 1;
+        }
+        else if (y == 0)
+        {
+            return 2;
+        }
+        else
+        {
+            return 3;
+        }
+    }
+
+    int if22(int x, int y)
+    {
+        if (x > 0 && y > 0)
+        {
+            return 1;
+        }
+        else if (x < 0 && y > 0)
+        {
+            return 2;
+        }
+        else if (x < 0 && y < 0)
+        {
+            return 3;
+        }
+        else
+        {
+            return 4;
+        }
+    }
+
+    void if23(int x1, int y1, int x2, int y2, int x3, int y3)
+    {
+        int x4, y4;
+        x4 = x1 + x2 - x3;
+        y4 = y1 + y2 - y3;
+        std::cout << "Координаты четвертой вершины: (" << x4 << ", " << y4 << ")" << std::endl;
+    }
+
+    double if24(double x)
+    {
+        if (x > 0)
+        {
+            return 2 * sin(x);
+        }
+        else
+        {
+            return 6 - x;
+        }
+    }
+
+    int if25(int x)
+    {
+        if (x <= -2 || x > 2)
+        {
+            return 2 * x;
+        }
+        else
+        {
+            -3 * x;
+        }
+    }
+
+    double if26(double x){
+        if (x <= 0)
+        {
+            return -x;
+        }
+        else if (x < 0 && x < 2)
+        {
+            return pow(x, 2);
+        }
+        else if (x >= 2)
+        {
+            return 4;
+        }
+    }
+
+    int if27(double x)
+    {
+        if (x < 0)
+            return 0;
+        int n = static_cast<int>(x); // уточнить
+        return (n % 2 == 0) ? 1 : -1;
+    }
+
+    void ifs28(int x)
+    {
+        int a = 365;
+        int b = 366;
+        if (x % 4 == 0)
+        {
+            if (x % 100 == 0)
+            {
+                if (x % 400 == 0)
+                {
+                    std::cout << a << std::endl;
+                }
+                else
+                {
+                    std::cout << b << std::endl;
+                }
+            }
+            else
+            {
+                std::cout << a << std::endl;
+            }
+        }
+        std::cout << 0 << std::endl;
+    }
