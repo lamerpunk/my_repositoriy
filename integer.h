@@ -77,3 +77,13 @@ int integer12(int a)
     std::cout << x1 << x2 << x3 << std::endl;
     return 0;
 }
+
+int integer13(int a)
+{
+    int x1 = a % 10;
+    int x2 = (a/10) % 10;
+    int x3 = (a/100) % 10;
+    std::cout << x2 << x3 << x1 << std::endl;
+    return 0;
+}
+

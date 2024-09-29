@@ -10,7 +10,7 @@
 int main()
 { 
 
-  std::cout << integer12(234)<<std::endl;
+  std::cout << integer13(234)<<std::endl;
 
 
 
