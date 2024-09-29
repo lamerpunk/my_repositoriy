@@ -4,13 +4,14 @@
 #include "boolean.h"
 #include "if.h"
 #include "for.h"
-
-
+#include "integer.h"
 
 
 int main()
 { 
-std::cout << if18(2, 2, 3);
+
+  std::cout << integer12(234)<<std::endl;
+
 
 
 //   int x = 0;

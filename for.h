@@ -13,5 +13,6 @@ int for2(int a, int b) {
         std::cout << "\nчисло: " << i << std::endl;
     }
     std::cout <<"\nколичество целых: " << n << std::endl;
+    return n;
 }
 

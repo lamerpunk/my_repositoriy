@@ -307,6 +307,7 @@ int if19(int a, int b, int c, int d){
         }
         return 4;
     }
+    return 0;
 }
 
     void if20(int a, int b, int c)
@@ -329,6 +330,7 @@ int if19(int a, int b, int c, int d){
         if (x == 0 && y == 0)
         {
             std::cout << "Точка совпадает с началом координат" << std::endl;
+            return 0;
         }
         else if (x == 0)
         {
@@ -392,7 +394,7 @@ int if19(int a, int b, int c, int d){
         }
         else
         {
-            -3 * x;
+            return -3 * x;
         }
     }
 
@@ -407,8 +409,9 @@ int if19(int a, int b, int c, int d){
         }
         else if (x >= 2)
         {
-            return 4;
+            return 4.0;
         }
+        return 0.0;
     }
 
     int if27(double x)
