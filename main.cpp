@@ -18,3 +18,4 @@ std::cout << if18(2, 2, 3);
 //   std::cout << (x == 0 ? "Ноль" : "Не ноль") <<std::endl;
   return 0;
 }
+
